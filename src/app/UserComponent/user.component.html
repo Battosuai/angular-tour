@@ -1,1 +1,25 @@
 <div>Hello, {{ username }}</div>
+<div>You are a {{ occupation }}</div>
+
+<button (click)="addItem()">Add Item</button>
+
+<section>
+  <li>
+    Static Image:
+    <img
+      ngSrc="https://placehold.co/600x400"
+      alt="Angular logo"
+      width="64"
+      height="64"
+    />
+  </li>
+  <li>
+    Dynamic Image:
+    <img [ngSrc]="logoUrl" [alt]="logoAlt" width="64" height="64" />
+  </li>
+  <li style="height: 128px; width: 128px; position: relative">
+    Fill Image:
+    <img [ngSrc]="logoUrl" [alt]="logoAlt" fill />
+  </li>
+  <img ngSrc="www.example.com/image.png" height="600" width="800" priority />
+</section>

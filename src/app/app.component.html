@@ -1,5 +1,5 @@
 <main>
-  <h1>Hello, {{ title }}, {{ 1 + 1 }}</h1>
+  <h1>Hello, {{ title | uppercase }}, {{ 1 + 1 }}</h1>
   @if (showUser){<app-user
     occupation="Software Developer"
     (addItemEvent)="addItem($event)"
@@ -80,6 +80,13 @@
   </section>
 
   <a routerLink="/about">About Us</a>
+
+  <p>Car Listing: {{ display }}</p>
+
+  <li>Date with "date" {{ birthday | date : "medium" }}</li>
+  <li>Number with "decimal" {{ num | number : "3.2-2" }}</li>
+  <li>Currency with "currency" {{ cost | currency }}</li>
+  <li>Reverse Machine: {{ word | reverse }}</li>
 </main>
 
 <router-outlet />
